@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1 Either you can't type or I can't code
+  h1= message
+  h2= error.status
+  img(src='images/error.jpg')
+  pre #{error.stack}
+

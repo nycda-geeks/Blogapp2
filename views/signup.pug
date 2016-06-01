@@ -1,0 +1,30 @@
+extends layout
+
+
+block title
+	title=title
+block content
+	div
+		h1 #{errorMessage}
+		.row
+			form.col.s12(method='post' name='signup')
+				.row
+				.input-field.col.s6
+					input#username.validate(type='text' name='username' autocomplete='off' )
+					label.waves-text.text-lighten-1(for='username') Username
+				.row
+				.input-field.col.s6
+					input#password.validate(type='password' name='password' )
+					label.waves-text.text-lighten-1(for='password') Password
+				.row
+				.input-field.col.s6
+					input#password.validate(type='password' name='password2')
+					label.waves-text.text-lighten-1(for='password') Re-type Password
+				.row
+				.input-field.col.s2
+					input#submit.validate.waves-effect.waves.lighten-1.btn(type='submit')
+
+
+				
+				
+				

@@ -1,0 +1,14 @@
+extends layout
+
+block navlist
+
+block content
+	.row
+		.col.s12.m6
+			.card.teal.lighten-1
+				.card-content.white-text
+					span.card-title BlogApp
+					p #{errorMessage}
+				.card-action
+					a(href='/signup') Signup
+					a(href='/login') Login

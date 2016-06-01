@@ -1,0 +1,19 @@
+extends layout
+
+block title
+	title=title
+block content
+	div
+		.row
+			form.col.s12(method='post' name='login')
+				.row
+				.input-field.col.s6
+					input#username.validate(type='text' name='username' autocomplete='off' )
+					label.waves-text.text-lighten-1(for='username') Username
+				.row
+				.input-field.col.s6
+					input#password.validate(type='password' name='password')
+					label.waves-text.text-lighten-1(for='password') Password
+				.row
+				.input-field.col.s2
+					input#submit.validate.waves-effect.waves.lighten-1.btn(type='submit')
