@@ -10,8 +10,8 @@ var SignUp = require('../models/SignUp.js')
 
 /* GET users listing. */
 
- router.get('/', SignUp.show)
- router.post('/', SignUp.signup)
+ router.get('/', SignUp.SHOW)
+ router.post('/', SignUp.POST)
 
 
 

@@ -1,0 +1,22 @@
+extends layout
+
+block content
+	h1 #{errorMessage}
+	.divider
+	.section
+		.container.col.s12
+			form.col.s12(method='post')
+				.row
+					.input-field.col.s12
+						input#title(type='text' name='title')
+						label.waves-text.text-lighten-1(for='title') Title
+
+				.row
+					.input-field.col.s12
+						textarea#textarea1.materialize-textarea(type='text' name='content')
+						label.waves-text.text-lighten-1(for='textarea1') Write your post here :)
+				.row
+				.input-field.col.s2
+					input#submit.validate.waves-effect.waves.lighten-1.btn(type='submit' value='Post')
+
+

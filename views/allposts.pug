@@ -1,0 +1,18 @@
+extends layout
+
+block content
+	
+
+	
+			#myid
+				.row.s5
+
+						ul
+							each post in posts
+								li
+									a(href='#')
+										h2 #{post.title}
+										p #{post.content}
+
+					
+						

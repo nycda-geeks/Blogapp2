@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var passport = require('passport')
-var SignUp = require('../models/SignUp.js')
+var CreatePost = require('../models/CreatePost.js')
 var flash = require('connect-flash')
 
 
@@ -16,8 +16,8 @@ var isAuthenticated = function (req, res, next) {
 
 
 /* GET profile*/
-router.get('/', isAuthenticated, function(req, res) {
-    res.render('creatpost')
-  })
+router.get('/', isAuthenticated, CreatePost.SHOW)
+
+router.post('/', CreatePost.POST)
 
 module.exports = router;

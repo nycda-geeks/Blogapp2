@@ -2,11 +2,11 @@ var bcrypt = require('bcrypt')
 var Model  = require('./Models.js')
 
 
-module.exports.show = function(req, res) {
+module.exports.SHOW = function(req, res) {
   res.render('signup', {title: 'Blogapp Signup'})
 }
 
-module.exports.signup = function(req, res) {
+module.exports.POST = function(req, res) {
   var username = req.body.username
   var password = req.body.password
   var password2 = req.body.password2

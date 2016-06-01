@@ -4,12 +4,12 @@ var Sequelize = require('sequelize')
 
 var attributes = {
 
-	postTitle: {
+	title: {
 		type: Sequelize.STRING,
 		allowNull: false,
 	},
 
-	postCont: {
+	content: {
 		type: Sequelize.STRING,
 		allowNull: false,
 	}
