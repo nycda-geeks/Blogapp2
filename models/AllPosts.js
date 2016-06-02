@@ -16,4 +16,7 @@ module.exports.SHOW = function(req,res) {
 
 }
 
+module.exports.POST = function(req, res) {
+	
+}
 
