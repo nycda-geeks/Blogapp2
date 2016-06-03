@@ -1,4 +1,7 @@
 
+
+
+
 //NODE MODULES
 var express      = require('express');
 var path         = require('path');
@@ -8,6 +11,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
 var flash        = require('connect-flash')
+
 
 //MODELS
 var setupPassport   = require('./models/setupPassport.js')

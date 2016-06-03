@@ -16,8 +16,10 @@ body{
 	background:#666;
 	color:#fff;
 }
-h2,p{
 
+
+
+h2,p{
 	font-size:100%;
 	font-weight:normal;
 }
@@ -32,7 +34,7 @@ ul{
 }
 ul li a{
 
-	text-decoration:underline;
+	text-decoration:none;
 	color:#000;
 	background:#ffc;
 	display:block;
@@ -115,7 +117,7 @@ li.usertjes {
 
 #jemoeder {
 	.card{
-		-webkit-transition: 1s;
+		-webkit-transition: 0.5s;
 	}
 
 

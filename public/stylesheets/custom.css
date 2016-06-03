@@ -16,7 +16,7 @@
   overflow: hidden;
   padding: 3em; }
 #myid ul li a {
-  text-decoration: underline;
+  text-decoration: none;
   color: #000;
   background: #ffc;
   display: block;
@@ -84,7 +84,7 @@ li.usertjes {
   padding: 3em; }
 
 #jemoeder .card {
-  -webkit-transition: 1s; }
+  -webkit-transition: 0.5s; }
 #jemoeder .card:hover {
   -webkit-transform: scale(1.1); }
 
