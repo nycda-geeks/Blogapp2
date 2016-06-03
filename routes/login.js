@@ -12,10 +12,15 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.post('/', passport.authenticate('local', {
-	successRedirect: '/profile',
-	failureRedirect: '/index',
-	failureFlash: true 
-}))
+router.post('/', //function(req,res) {
+
+
+	// console.log("username: " + req.body.username)
+
+	// var redirect = '/index/' + req.body.username;
+	passport.authenticate('local'), function (req,res) { 
+		res.redirect('/index/' +req.user.username)
+	})
+
 
 module.exports = router;

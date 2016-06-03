@@ -18,6 +18,6 @@ var isAuthenticated = function (req, res, next) {
 /* GET profile*/
 router.get('/', isAuthenticated, CreatePost.SHOW)
 
-router.post('/', CreatePost.POST)
+router.post('/', isAuthenticated, CreatePost.POST)
 
 module.exports = router;

@@ -19,7 +19,6 @@ var users      = require('./routes/users');
 var login      = require('./routes/login');
 var logout     = require('./routes/logout');
 var signup     = require('./routes/signup');
-var profile    = require('./routes/profile');
 var findpost   = require('./routes/findpost');
 var createpost = require('./routes/createpost');
 var comments   = require('./routes/comments');
@@ -53,8 +52,11 @@ setupPassport(app)
 
 
 
+
+
+
 // USE ROUTES
-app.use('/', index);
+app.use('/index', index);
 app.use('/users', users);
 app.use('/allposts', allposts);
 app.use('/comments', comments);
@@ -62,9 +64,13 @@ app.use('/createpost', createpost);
 app.use('/findpost', findpost);
 app.use('/login', login);
 app.use('/logout', logout);
-app.use('/profile', profile);
 app.use('/signup', signup);
 app.use('/unknown', unknown);
+
+
+app.get('/', function(req, res) {
+  res.redirect('/index')
+})
 
 
 

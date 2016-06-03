@@ -6,23 +6,26 @@ block title
 block content
 	div
 		.pink-text #{errorMessage}
-		.row
-			form.col.s12(method='post' name='signup')
+		.container
+			
 				.row
-				.input-field.col.s6
-					input#username.validate(type='text' name='username' autocomplete='off' )
-					label.waves-text.text-lighten-1(for='username') Username
-				.row
-				.input-field.col.s6
-					input#password.validate(type='password' name='password' )
-					label.waves-text.text-lighten-1(for='password') Password
-				.row
-				.input-field.col.s6
-					input#password.validate(type='password' name='password2')
-					label.waves-text.text-lighten-1(for='password') Re-type Password
-				.row
-				.input-field.col.s2
-					button#submit.validate.waves-effect.waves.lighten-1.btn(type='submit') submit
+
+					form.col.s12.offset-s4(method='post' name='signup')
+						.row
+						.input-field.col.s4
+							input#username.validate(type='text' name='username' autocomplete='off' autofocus )
+							label.waves-text.text-lighten-1(for='username') Username
+						.row
+						.input-field.col.s4
+							input#password.validate(type='password' name='password' )
+							label.waves-text.text-lighten-1(for='password') Password
+						.row
+						.input-field.col.s4
+							input#password.validate(type='password' name='password2')
+							label.waves-text.text-lighten-1(for='password') Re-type Password
+						.row
+						.input-field.col.s5.offset-s1
+							button#submit.validate.waves-effect.waves.lighten-1.btn(type='submit') submit
 
 
 				

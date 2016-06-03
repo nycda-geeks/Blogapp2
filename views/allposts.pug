@@ -1,18 +1,17 @@
 extends layout
 
 block content
-	
 
-	
-			#myid
-				.row.s5
-
-						ul
-							each post in posts
-								li
-									a(href='#')
-										h2 #{post.title}
-										p #{post.content}
+		#myid
+			.row
+				ul
+					each post in posts
+						li.col.l2
+							a(href='#')
+								h2.truncate #{post.title}
+								p.truncate #{post.content}
+								i.material-icons chat_bubble_outline
+								.badge
 
 					
 						

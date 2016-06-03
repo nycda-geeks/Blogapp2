@@ -1,6 +1,18 @@
 extends layout
 
+block title
+	title BlogApp All Users
 
 block content
-
 	
+	.section
+	.section
+	.container
+		.row
+			ul
+				each user in users
+					li.usertjes.col.s3
+						.row
+						a.col.s8.waves-effect.waves-light.btn(href='/allposts/'+ user.username) #{user.username}
+						
+						

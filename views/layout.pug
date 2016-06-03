@@ -4,29 +4,38 @@ html
 		block title
 			title= title
 		block link
-			link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+			link(rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons')
 			link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css')
 			link(href='http://fonts.googleapis.com/css?family=Reenie+Beanie:regular' rel='stylesheet' type='text/css')
-			link(rel='stylesheet' href='stylesheets/custom.css')
+			link(href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css')
+			link(rel='stylesheet' href='/stylesheets/custom.css')
 			
 	body
-		block navlist
-			nav
-				.nav-wrapper
-					a.brand-logo.left.active(href='/') BlogApp
-					ul#nav-mobile.right
-						li
-							a(href='/signup') Signup
+		nav
+			.nav-wrapper
+				a.brand-logo.left.active(href='/index') { ✎ } BLOGAPP
+				ul#nav-mobile.right
+					
+					if !username
 						li
 							a(href='/login') Login
 						li
-							a(href='/profile') Profile
+							a(href='/signup') Signup
+					if username
 						li
 							a(href='/createpost') Write a Post
 						li
 							a(href='/allposts') All Posts
+						li
+							a(href='/users') Users
 						
-		block script
-			script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.1.min.js')
-			script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js')
-		block content
+						li
+							a(href='/logout') Logout
+	block content
+					
+	
+
+	script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.1.min.js')
+	script(type='text/javascript', src='javascripts/specialejquery.js')
+	script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js')
+	

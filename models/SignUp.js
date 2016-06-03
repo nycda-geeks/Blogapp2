@@ -31,13 +31,13 @@ module.exports.POST = function(req, res) {
   }
   
 
-  Model.connection.sync().then(function (){
+  
 
-    Model.User.create(newUser).then(function() {
-      res.redirect('/')
-    }).catch(function(error) {
-      req.flash('error', "Please, choose a different username.")
-      res.redirect('/signup')
-    })
+  Model.User.create(newUser).then(function() {
+    res.redirect('/login')
+  }).catch(function(error) {
+    req.flash('error', "Please, choose a different username.")
+    res.redirect('/signup')
   })
+  
 }

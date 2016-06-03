@@ -1,22 +1,27 @@
 var Model = require('./Models.js')
 
 module.exports.SHOW = function(req,res) {
-	
-	Model.Post.findAll().then(function(posts) {
-		var data = posts.map(function(blogposts) { 
-			return {
-				title: blogposts.dataValues.title,
-				content: blogposts.dataValues.content,
-			} 
+	if (req.isAuthenticated())
+		Model.Post.findAll().then(function(posts) {
+			var data = posts.map(function(blogposts) { 
+				return {
+					title: blogposts.dataValues.title,
+					content: blogposts.dataValues.content,
+				} 
+			})
+
+			res.render('allposts',{posts:data, 
+				username: req.user.username})
+
 		})
-		console.log(data)
-		res.render('allposts',{posts:data})
-
-	}) 
-
 }
+
+
 
 module.exports.POST = function(req, res) {
-	
+
+
+
 }
+
 

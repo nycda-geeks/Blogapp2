@@ -1,4 +1,54 @@
 extends layout
 
 block content
-  
+	
+	if username && !(username == "Kevin")
+
+
+			.container
+				.row.valign.center-align
+					.card.teal.lighten-1.z-depth-2
+							.card-content.white-text
+								
+								span.card-title Welcome #{username}
+								p
+					#jemoeder
+						a(href='/createpost')
+							.card.teal.lighten-3.z-depth-2
+									.card-content.white-text
+										span.card-title Why not write a cool post?
+						a(href='/users')
+							.card.teal.lighten-3.z-depth-2
+									.card-content.white-text
+										span.card-title Or maybe you want to check out what other users wrote?
+
+
+	if !username
+		.container
+			.section
+			.section
+			.section
+				.row.valign.center-align
+					#jemoeder
+						a(href='/login')
+							.card.teal.lighten-1
+									.card-content.white-text
+										
+										span.card-title
+										p Please Login
+						a(href='/signup')
+							.card.teal.lighten-1
+									.card-content.white-text
+										
+										span.card-title 
+										p Or signup
+	if username === "Kevin"
+		.section
+		.section
+		.container
+			.row.valign.center-align
+				.card.red.lighten-2
+						.card-content.white-text
+							
+							span.card-title Nee Kevin jij mag niet!
+							p

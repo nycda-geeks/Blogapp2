@@ -3,17 +3,18 @@ extends layout
 block title
 	title=title
 block content
-	div
-		.row
-			form.col.s12(method='post' name='login')
-				.row
-				.input-field.col.s6
-					input#username.validate(type='text' name='username' autocomplete='off' autofocus)
-					label.waves-text.text-lighten-1(for='username') Username
-				.row
-				.input-field.col.s6
-					input#password.validate(type='password' name='password')
-					label.waves-text.text-lighten-1(for='password') Password
-				.row
-				.input-field.col.s2
-					button#submit.validate.waves-effect.waves.lighten-1.btn(type='submit') submit
+	
+		.container
+			.row
+				form.col.s12.offset-s4(method='post' name='login')
+					.row
+					.input-field.col.s4
+						input#username.validate(type='text' name='username' autocomplete='off' autofocus)
+						label.waves-text.text-lighten-1(for='username') Username
+					.row
+					.input-field.col.s4
+						input#password.validate(type='password' name='password')
+						label.waves-text.text-lighten-1(for='password') Password
+					.row
+					.input-field.col.s3.offset-s1
+						button#submit.validate.waves-effect.waves.lighten-1.btn(type='submit') submit

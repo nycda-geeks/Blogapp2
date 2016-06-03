@@ -16,7 +16,7 @@
   overflow: hidden;
   padding: 3em; }
 #myid ul li a {
-  text-decoration: none;
+  text-decoration: underline;
   color: #000;
   background: #ffc;
   display: block;
@@ -79,5 +79,17 @@
   padding-right: 1em; }
 #myid ol li a {
   color: #fff; }
+
+li.usertjes {
+  padding: 3em; }
+
+#jemoeder .card {
+  -webkit-transition: 1s; }
+#jemoeder .card:hover {
+  -webkit-transform: scale(1.1); }
+
+body {
+  font-family: Raleway;
+  font-weight: bold; }
 
 /*# sourceMappingURL=custom.css.map */
