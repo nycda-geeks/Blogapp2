@@ -1,17 +1,19 @@
 extends layout
 
+block title
+	title All Posts
+
 block content
 
-		#myid
+		.section
+		.section
+		
 			.row
-				ul
+				ul 
 					each post in posts
-						li.col.l2
-							a(href='#')
-								h2.truncate #{post.title}
-								p.truncate #{post.content}
-								i.material-icons chat_bubble_outline
-								.badge
-
-					
-						
+							li.col.s4
+								a(href= '/findpost/' + post.userId + '/' + post.id).row
+										.card-panel.teal
+											span.white-text
+												h1 # #{post.title} 
+												p By: #{post.user.username}

@@ -1,0 +1,37 @@
+extends layout
+
+block content
+	if !special
+		.section
+		.section
+			
+			.row
+				ul 
+					each post in posts
+							li.col.s4
+								a(href= '/findpost/' + post.userId + '/' + post.id).row
+										.card-panel.teal
+											span.white-text
+												h1 # #{post.title}
+												
+	if special
+		
+		.section
+		.container
+			.col.s3
+				.row
+					.col.s12
+						.card-panel.teal
+							span.white-text
+								h1.center-align #{posts.title}
+						.section
+						.card-panel.teal
+							span.white-text
+								
+								p.center-align by: #{posts.user.username} 
+						.section
+						.card-panel.teal
+								.white-text #{posts.content}
+								.section
+								.section
+	

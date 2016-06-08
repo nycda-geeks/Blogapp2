@@ -1,7 +1,7 @@
 //NODE MODULES
 var express = require('express');
 var router = express.Router();
-var oneUser = require('../models/Index.js')
+
 
 //MODULES
 
@@ -14,7 +14,14 @@ var isAuthenticated = function (req, res, next) {
 
 /* GET home page. */
 
-router.get('/:id', isAuthenticated, oneUser.SHOW)
+router.get('/:id', isAuthenticated, function(req,res) {
+	
+		
+	res.render('index', {
+		username: req.params.id
+	})
+	
+})
 
 router.get('/', function(req,res){
 	if (req.isAuthenticated())

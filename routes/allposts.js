@@ -1,8 +1,8 @@
 //NODE MODULES
 var express = require('express');
 var router = express.Router();
-var AllPosts = require('../models/AllPosts.js')
-var AllUsers = require('../models/Users.js')
+var Model = require('../models/Models.js')
+
 
 //MODULES
 
@@ -19,9 +19,21 @@ var isAuthenticated = function (req, res, next) {
 
 
 /* GET users listing. */
-router.get('/', isAuthenticated, AllPosts.SHOW )
+router.get('/', isAuthenticated, function(req,res) {
 
-router.get('/:id', isAuthenticated, AllUsers.POST)
+	Model.Post.findAll({include: [Model.User]}).then(function(posts) {
+		console.log("komt ie " + posts)
+
+		res.render('allposts',{posts:posts, 
+			username: req.user.username})
+
+		
+	})
+})
+
+
+
+
 
 
 

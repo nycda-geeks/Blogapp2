@@ -20,7 +20,8 @@ router.post('/', //function(req,res) {
 	// var redirect = '/index/' + req.body.username;
 	passport.authenticate('local'), function (req,res) { 
 		res.redirect('/index/' +req.user.username)
-	})
+	}) 
+
 
 
 module.exports = router;

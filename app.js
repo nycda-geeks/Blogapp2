@@ -1,4 +1,4 @@
-
+ 
 
 
 
@@ -22,12 +22,12 @@ var index      = require('./routes/index');
 var users      = require('./routes/users');
 var login      = require('./routes/login');
 var logout     = require('./routes/logout');
-var signup     = require('./routes/signup');
 var findpost   = require('./routes/findpost');
 var createpost = require('./routes/createpost');
-var comments   = require('./routes/comments');
+
 var allposts   = require('./routes/allposts');
 var unknown    = require('./routes/unknown');
+var signup     = require('./routes/signup');
 
 // APP
 var app = express();
@@ -63,7 +63,7 @@ setupPassport(app)
 app.use('/index', index);
 app.use('/users', users);
 app.use('/allposts', allposts);
-app.use('/comments', comments);
+
 app.use('/createpost', createpost);
 app.use('/findpost', findpost);
 app.use('/login', login);

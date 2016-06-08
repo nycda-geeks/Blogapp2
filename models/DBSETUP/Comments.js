@@ -1,18 +1,12 @@
-// SET UP TABLE FOR POSTS
-
 var Sequelize = require('sequelize')
 
 var attributes = {
 
-	title: {
+	comment: {
 		type: Sequelize.STRING,
 		allowNull: false,
-	},
-
-	content: {
-		type: Sequelize.TEXT,
-		allowNull: false,
 	}
+
 }
 
 
