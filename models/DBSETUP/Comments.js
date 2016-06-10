@@ -5,6 +5,11 @@ var attributes = {
 	comment: {
 		type: Sequelize.STRING,
 		allowNull: false,
+	},
+
+	username: {
+		type: Sequelize.STRING,
+		allowNull:false,
 	}
 
 }

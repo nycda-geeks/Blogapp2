@@ -92,4 +92,9 @@ body {
   font-family: Raleway;
   font-weight: bold; }
 
+#jemoeder2 .card-panel.teal {
+  -webkit-transition: 0.5s; }
+#jemoeder2 .card-panel.teal:hover {
+  -webkit-transform: scale(1.1); }
+
 /*# sourceMappingURL=custom.css.map */

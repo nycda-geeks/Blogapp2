@@ -1,0 +1,29 @@
+{"posts":
+	{
+		"id":2,
+		"title":"lalalalalalal",
+		"content":"gekkie",
+		"userId":1,
+		"user":
+		{
+			"id":1,
+			"username":"Maartje",
+			"password":"$2a$10$mb5C6IHbT5RYVS.QXFDWYehgcXaRTPQUjRyhIaUzyqWEDWytj.OYu",
+			"salt":"$2a$10$mb5C6IHbT5RYVS.QXFDWYe"
+		}
+	},
+	"comments":[
+	{"id":16,"comment":"goeiegrap","postId":2,"userId":1},
+	{"id":17,"comment":"hallo","postId":2,"userId":1},
+	{"id":18,"comment":"ekel","postId":2,"userId":1},
+	{"id":19,"comment":"ekel","postId":2,"userId":1},
+	{"id":20,"comment":"jehoerenmoeder","postId":2,"userId":1},
+	{"id":28,"comment":"jehoerenmoeder","postId":2,"userId":1},
+	{"id":29,"comment":"Dickwad\r\n","postId":2,"userId":1},
+	{"id":30,"comment":"Dickwad\r\n","postId":2,"userId":1},
+	{"id":31,"comment":"anus\r\n","postId":2,"userId":1},
+	{"id":33,"comment":"koekje","postId":2,"userId":1},
+	{"id":34,"comment":"gekkiebekkie","postId":2,"userId":1},
+	{"id":35,"comment":"ditiseentest","postId":2,"userId":1}],
+	"username":"Maartje","special":"yes"
+}

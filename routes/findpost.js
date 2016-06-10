@@ -35,12 +35,46 @@ router.get('/:userid', function(req,res){
 router.get('/:userid/:postid', function(req, res) {
 	if (req.isAuthenticated())
 		var postid = req.params.postid
-	Model.Post.findOne({where: {id: postid}, include: [Model.User]}).then(function(posts) {
+	Model.Post.findOne({where: {id: postid}, include: [Model.User, Model.Comment]}).then(function(posts) {
 		var data = posts 
-		res.render('findpost', {posts: data, username:req.user.username, special: "yes"})
+		console.log("get post on page of posts: " + data)
+		Model.Comment.findAll({where: {postId: postid}}).then(function(comments){
+			var userName = req.user.username
+			var cdata = comments
+			res.render('findpost',{posts: data, comments: cdata, username:userName, special: "yes"})
+			console.log("hdfsjkfhdkjsah"+ userName)
+		})
 	})
 
 })
+
+
+router.get('/:userid/:postid/writecomment', function(req, res) {
+	if (req.isAuthenticated())
+		var postid = req.params.postid
+	Model.Post.findOne({where: {id: postid}, include: [Model.User, Model.Comment]}).then(function(posts) {
+		var data = posts
+		Model.Comment.findAll({where: {postId: postid}}).then(function(comments){
+			var cdata = comments
+			res.render('comments', {posts: data, comments: cdata, username:req.user.username, special: "yes"})
+			console.log("get write page: " + cdata)
+		})
+	})
+})
+
+router.post('/:userid/:postid/writecomment', function(req, res) {
+	if (req.isAuthenticated())
+		var userid = req.params.userid
+		var useridd = req.session.passport.user
+	var postid = req.params.postid
+	var newComment = {comment: req.body.comment,
+		username: req.user.username,
+		userId: useridd,
+		postId: postid}
+		Model.Comment.create(newComment)
+		
+		res.redirect('/findpost/' + userid + '/' + postid)
+	})
 
 
 

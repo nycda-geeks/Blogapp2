@@ -7,14 +7,15 @@ block content
 			
 			.row
 				ul 
-					each post in posts
-							li.col.s4
-								a(href= '/findpost/' + post.userId + '/' + post.id).row
-										.card-panel.teal
-											span.white-text
-												h1 # #{post.title}
+					#jemoeder2
+						each post in posts
+								li.col.s4
+									a(href= '/findpost/' + post.userId + '/' + post.id).row
+											.card-panel.teal
+												span.white-text
+													h1 # #{post.title}
 												
-	if special
+	if special 
 		
 		.section
 		.container
@@ -23,7 +24,7 @@ block content
 					.col.s12
 						.card-panel.teal
 							span.white-text
-								h1.center-align #{posts.title}
+								h4.center-align #{posts.title}
 						.section
 						.card-panel.teal
 							span.white-text
@@ -34,4 +35,14 @@ block content
 								.white-text #{posts.content}
 								.section
 								.section
+						.section
+						.card-panel.teal
+							p.white-text Comments:
+								ul
+									each comment in comments
+										li.white-text #{comment.username} : #{comment.comment} 
+						.section
+						.section
+						a.btn(href='/findpost/' + posts.userId + '/' + posts.id + '/writecomment') Comment
+
 	

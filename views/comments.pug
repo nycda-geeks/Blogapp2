@@ -1,4 +1,22 @@
 extends layout
 
 block content
+	h1 #{errorMessage}
 	
+	.section
+		.container.col.s12
+			.row
+				.card-panel.teal
+					span.white-text
+						h1 # #{posts.title} 
+						p By: #{posts.user.username}
+
+
+			form.col.s12(method='post')
+				.row
+					.input-field.col.s12
+						textarea#textarea1.materialize-textarea(type='text' name='comment')
+						label.waves-text.text-lighten-1(for='textarea1') Write your comment here :)
+				.row
+				.input-field.col.s2
+					input#submit.validate.waves-effect.waves.lighten-1.btn(type='submit' value='Comment')
